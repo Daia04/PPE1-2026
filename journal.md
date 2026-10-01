@@ -99,4 +99,22 @@ esc pour quitter le mode insérer et retourner au mode commande
 :wq permet de quitter et sauvegarder (write and quit)
 :q permet de quitter sans sauvegarder
 
- 
+=========================================
+
+Pour mettre à jour un fichier via le terminal sur github
+
+Se connecter à son github sur le terminal avec les commandes:
+git config --global user.email "djamila.hatteea@gmail.com"
+git config --global user.name "Daia04"
+
+Vérifier que le fichier est en avance sur celle de github (et donc besoin d'update):
+git status
+
+Ensuite préparer le fichier à update:
+git add journal.md
+
+Valider /Commit les changements avec un message descriptif:
+git commit -m "Mise à jour de journal.md"
+
+Push les modifications sur le dépôt distant github:
+git push origin main 
