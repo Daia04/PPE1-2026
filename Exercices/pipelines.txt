@@ -24,4 +24,29 @@ Annotations en 2018 :
 588
 -----------------------------
 1.b
+       echo "Annotations en 2016 :" > ./locations.txt
+  397  grep -r "Location" ann/2016/ | wc -l >> ./locations.txt
+  398  echo "Annotations en 2017 :" >> ./locations.txt
+  399  grep -r "Location" ann/2017/ | wc -l >> ./locations.txt
+  400  echo "Annotations en 2018 :" >> ./locations.txt
+  401  grep -r "Location" ann/2018/ | wc -l >> ./locations.txt
+  402  git add ./locations.txt
+  403  git commit -m "Exercice 1.b"
+  404  git push origin main 
+-----------------------------
+2.a
+
+
+  422  grep "Location" ann/2018/*/* | cut -f3 | sort | uniq -c | sort -n | tail -15 > ./classements_2018.txt   
+  423  cat classements_2018.txt
+  424  grep "Location" ann/2016/*/* | cut -f3 | sort | uniq -c | sort -n | tail -15 > ./classements_2016.txt   
+  425  grep "Location" ann/2017/*/* | cut -f3 | sort | uniq -c | sort -n | tail -15 > ./classements_2017.txt   
+  426  cat classements_2016.txt
+  427  cat classements_2017.txt
+  428  git add classements_2016.txt classements_2017.txt classements_2018.txt 
+  429  git commit -m "Exercice 2.a"
+  430  git push origin main 
+
+
+
 
