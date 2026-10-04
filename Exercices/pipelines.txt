@@ -1,1 +1,27 @@
+##04/10/2026
+1.a
+  319  echo "Annotations en 2016 :" > ./comptes.txt
+  320  cat ann/2016/*/* | grep -c "2016" >> ./comptes.txt
+  321  cat comptes.txt
+  322  echo "Annotations en 2017 :" > ./comptes.txt
+  323  cat ann/2017/*/* | grep -c "2017" >> ./comptes.txt
+  324  echo "Annotations en 2018 :" > ./comptes.txt
+  325  cat comptes.txt
+  326  echo "Annotations en 2016 :" > ./comptes.txt
+  327  cat ann/2016/*/* | grep -c "2016" >> ./comptes.txt
+  328  echo "Annotations en 2017 :" >> ./comptes.txt
+  329  cat ann/2017/*/* | grep -c "2017" >> ./comptes.txt
+  330  echo "Annotations en 2018 :" >> ./comptes.txt
+  331  cat ann/2018/*/* | grep -c "2018" >> ./comptes.txt
+  332  cat comptes.txt
+
+results:
+Annotations en 2016 :
+1009
+Annotations en 2017 :
+484
+Annotations en 2018 :
+588
+-----------------------------
+1.b
 
