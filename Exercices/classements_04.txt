@@ -1,0 +1,15 @@
+      6 Canada
+      6 Cuba
+      6 Jupiter
+      7 Europe
+      7 Turquie
+      8 Corée du Nord
+      8 Saturne
+      9 Guyane
+      9 Russie
+      9 Syrie
+     10 Mexique
+     10 Paris
+     10 Pila
+     31 États-Unis
+     39 France
