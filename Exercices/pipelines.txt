@@ -35,6 +35,12 @@ Annotations en 2018 :
   404  git push origin main 
 -----------------------------
 2.a
+  - grep "Location" ann/2016/*/*: cherche le mot Location dans les fichiers ann de 2016 dans tous les mois. Ici permet de garder la ligne "Location" uniquement.
+  - cut -f3 : extrait la 3ème colonne, là où se trouve le nom du lieu.
+  - sort : trie alphabétique
+  - uniq -c : comptele nombre d'occurences des différents lieux
+  - sort -n : trie numérique croissant
+  - tail -15 : prend les 15 dernières lignes, donc les 15 plus fréquents
 
 
   422  grep "Location" ann/2018/*/* | cut -f3 | sort | uniq -c | sort -n | tail -15 > ./classements_2018.txt   
@@ -46,6 +52,15 @@ Annotations en 2018 :
   428  git add classements_2016.txt classements_2017.txt classements_2018.txt 
   429  git commit -m "Exercice 2.a"
   430  git push origin main 
+------------------------------
+2.b
+- changer le chemin pour cette fois prendre les données d'un mois sur toutes les années.
+
+432  grep "Location" ann/*/04/* | cut -f3 | sort | uniq -c | sort -n | tail -15 > ./classements_04.txt   
+  433  cat ./classements_04.txt 
+  434  git add classements_04.txt
+  435  git commit -m "Exercice 2.b"
+  436  git push origin main 
 
 
 
