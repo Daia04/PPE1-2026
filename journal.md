@@ -1,3 +1,5 @@
+Lorem Ipsum
+
 # Journal de bord du projet encadré
 
 ## 30/09/2026
