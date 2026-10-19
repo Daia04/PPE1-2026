@@ -1,5 +1,3 @@
-Lorem Ipsum
-Cette phrase doit rester après la correction
 # Journal de bord du projet encadré
 
 ## 30/09/2026
@@ -123,7 +121,12 @@ Push les modifications sur le dépôt distant github:
    git push origin main 
 
 ## 16/10/26
-# Séance 3
+# Séance 2
 ## Exercices git II: corriger des erreurs
  Via le terminal, se connecter à son compte github afin d'y modifier le 'journal.md' en y insérant une phrase erreur et une phrase qui devra être présente après correction. Push le tout après avoir commit. 
-
+Pour obtenir l'identifiant SHA :
+   -   git log
+Pour effacer le commit et les données qui lui sont associé (ici la phrase "Lorem Ipsum":
+   -   git reset --hard <codeSHAducommit>
+Ne pas oublier --hard car sinon on effacera simplement le commit de l'historique et non pas les modifications associées.
+Cependant cela effacera tous les commit et leurs contenu si effectuer après le commit effacer...
