@@ -1,5 +1,5 @@
 Lorem Ipsum
-
+Cette phrase doit rester après la correction
 # Journal de bord du projet encadré
 
 ## 30/09/2026
