@@ -1,6 +1,9 @@
+Lorem Ipsum askip
+
+
 # Journal de bord du projet encadré
 
-##30/09/2026
+## 30/09/2026
 Travail de classement de fichier dans l'arborescence
 
    45  git clone git@github.com:YoannDupont/PPE1-2627.git
@@ -92,6 +95,7 @@ Pas de problèmes rencontrés
 
 ## 01/10/2026
 
+
 Création de journal.md et utilidation de la commande vim pour y entré du texte
 >>vim [argument-fichier] #ouvre le fichier
 i pour passer en mode insérer et nous permet donc d'y mettre du texte
@@ -118,3 +122,8 @@ git commit -m "Mise à jour de journal.md"
 
 Push les modifications sur le dépôt distant github:
 git push origin main 
+
+## 16/10/26
+# Séance 3
+## Exercices git II: corriger des erreurs
+
