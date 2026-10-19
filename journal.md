@@ -1,7 +1,3 @@
-Lorem Ipsum askip
-
-Cette ligne doit rester après correction (voir séance 3)
-
 # Journal de bord du projet encadré
 
 ## 30/09/2026
@@ -98,7 +94,7 @@ Pas de problèmes rencontrés
 
 
 Création de journal.md et utilidation de la commande vim pour y entré du texte
->>vim [argument-fichier] #ouvre le fichier
+   >>vim [argument-fichier] #ouvre le fichier
 i pour passer en mode insérer et nous permet donc d'y mettre du texte
 esc pour quitter le mode insérer et retourner au mode commande
 :wq permet de quitter et sauvegarder (write and quit)
@@ -109,22 +105,23 @@ esc pour quitter le mode insérer et retourner au mode commande
 Pour mettre à jour un fichier via le terminal sur github
 
 Se connecter à son github sur le terminal avec les commandes:
-git config --global user.email "djamila.hatteea@gmail.com"
-git config --global user.name "Daia04"
+   git config --global user.email "djamila.hatteea@gmail.com"
+   git config --global user.name "Daia04"
 
 Vérifier que le fichier est en avance sur celle de github (et donc besoin d'update):
-git status
+   git status
 
 Ensuite préparer le fichier à update:
-git add journal.md
+   git add journal.md
 
 Valider /Commit les changements avec un message descriptif:
-git commit -m "Mise à jour de journal.md"
+   git commit -m "Mise à jour de journal.md"
 
 Push les modifications sur le dépôt distant github:
-git push origin main 
+   git push origin main 
 
 ## 16/10/26
 # Séance 3
 ## Exercices git II: corriger des erreurs
+ Via le terminal, se connecter à son compte github afin d'y modifier le 'journal.md' en y insérant une phrase erreur et une phrase qui devra être présente après correction. Push le tout après avoir commit. 
 
