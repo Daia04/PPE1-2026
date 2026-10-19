@@ -1,5 +1,6 @@
 Lorem Ipsum askip
 
+Cette ligne doit rester après correction (voir séance 3)
 
 # Journal de bord du projet encadré
 
