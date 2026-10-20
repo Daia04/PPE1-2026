@@ -194,4 +194,36 @@ Mais pourquoi ne puis-je endigué mes larmes.
 git rm oups.md
 
 Exo 4:
-a. mettre la ligne de côté?
+
+a. Mettre de côté la phrase
+
+b. 
+- Pour voir si à jour par rapport à la version en ligne:
+    git fetch origin
+Puis:
+    git status
+--> Nous renvoit qu'il y a un commit de retard, on essaie donc de pull mais:
+"error: impossible de tirer avec un rebasage : vous avez des modifications non indexées.
+error: Veuillez les valider ou les remiser.
+"
+
+- Pour garder de côté les changements effectués en local pour le moment:
+    git stash push -m "Conservation des changements séance 3"
+    
+- Pour avoir la liste des changements conservés:
+    git stash list
+
+- Pour  appliquer les changement et effacé le stash:
+    git stash pop "Conservation des changements séance 3"
+    
+- Les add puis commit (et push)
+
+Exo 5:
+
+- Enfin ajouter un message en updatant le tag de la séance 2:
+
+    git tag -a git-seance2-fin -m "séance 3, version finale des exercices de git"
+    
+- Puis pousser le tag:
+
+    git push origin git-seance2-fin
