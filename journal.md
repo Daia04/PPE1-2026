@@ -192,3 +192,6 @@ Mais pourquoi ne puis-je endigué mes larmes.
 
 - Supression de oups.md:
 git rm oups.md
+
+Exo 4:
+a. mettre la ligne de côté?
