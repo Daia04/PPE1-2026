@@ -122,7 +122,7 @@ Push les modifications sur le dépôt distant github:
 
 ## 16/10/26
 # Séance 2
-## Exercices git II: corriger des erreurs
+## Exercices git II: correction d'erreurs
  Via le terminal, se connecter à son compte github afin d'y modifier le 'journal.md' en y insérant une phrase erreur et une phrase qui devra être présente après correction. Push le tout après avoir commit. 
 Pour obtenir l'identifiant SHA :
    -   git log
