@@ -3,14 +3,11 @@
 ## 30/09/2026
 Travail de classement de fichier dans l'arborescence
 
-   45  git clone git@github.com:YoannDupont/PPE1-2627.git
-   46  cd ..
-   47  mkdir Exercice1
-   48  cd Exercice1
-   51  wget http://plurital.org/ppe1/seance1/archive-11.zip
-   52  ls
-   55  unzip a*
-   56  mkdir txt ann img docs
+- Récupération du zip pour effectuer l'exercice et unzip:
+-    wget http://plurital.org/ppe1/seance1/archive-11.zip
+-    unzip a*
+-    Création des dossiers et de leurs sous dossiers:
+-       dir txt ann img docs
    57  cd txt
    58  mkdir 2016 2017 2018
    59  cd 2016
@@ -18,18 +15,8 @@ Travail de classement de fichier dans l'arborescence
    62  cd ../../
    63  mv 2016_01*.txt txt/2016/01
 ==> Changer les mois pour effectuer le tri par mois  (01 à 12)
-   76  cd txt
-   78  ls
-   79  cd 2017
-   80  mkdir 01 02 03 04 05 06 07 08 09 10 11 12
-   81  cd ../../
-   82  mv 2017_01*.txt txt/2017/01
-==> De même ici pour le tri par mois
-   94  cd txt/2018
-   95  mkdir 01 02 03 04 05 06 07 08 09 10 11 12
-   96  cd ../..
-   97  mv 2018_01*.txt txt/2018/01
-==> Idem
+==> Répéter le processus pour txt/2017 et txt/2018
+
   109  cd ann
   118  mkdir 2016 2017 2018
   119  cd 2016
@@ -43,6 +30,7 @@ Travail de classement de fichier dans l'arborescence
   139  mv 2017_01*.ann ann/2017/01
   151  mv 2018_01*.ann ann/2018/01
 ==> A répéter en fonction des différentes années et des mois
+
   165  ls *.ann
   167  cd img
   168  mkdir Paris Tokyo Washington Berlin Rome Romeo
@@ -88,8 +76,6 @@ Travail de classement de fichier dans l'arborescence
   219  cd ../
   220  zip -r Exercice1.zip Exercice1/
 
-Pas de problèmes rencontrés
-
 ## 01/10/2026
 
 
@@ -120,6 +106,55 @@ Valider /Commit les changements avec un message descriptif:
 Push les modifications sur le dépôt distant github:
    git push origin main 
 
+#Exercice pipelines
+cd Exercices/
+
+  398  echo "Annotations en 2016 :" > ./locations.txt
+  399  grep -r "Location" ann/2016/ | wc -l >> ./locations.txt
+  400  echo "Annotations en 2017 :" >> ./locations.txt
+  401  grep -r "Location" ann/2017/ | wc -l >> ./locations.txt
+  402  echo "Annotations en 2018 :" >> ./locations.txt
+  403  grep -r "Location" ann/2018/ | wc -l >> ./locations.txt
+  404  git add ./locations.txt
+  405  git commit -m "Exercice 1.b"
+  406  git push origin main 
+  407  history
+  408  head -5 ann/2016/*/*
+  409  grep "Location" ann/2016/* | cut -f5 | sort | uniq -c | sort -n | tail -f15 > ./classements_2016.txt
+  410  grep "Location" ann/2016/*/* | cut -f5 | sort | uniq -c | sort -n | tail -f15 > ./classements_2016.txt
+  411  grep "Location" ann/2016/*/* | cut -f5 | sort | uniq -c | sort -n | tail -15 > ./classements_2016.txt
+  412  grep "Location" ann/2017/*/* | cut -f5 | sort | uniq -c | sort -n | tail -15 > ./classements_2017.txt
+  413  grep "Location" ann/2018/*/* | cut -f5 | sort | uniq -c | sort -n | tail -15 > ./classements_2018.txt
+  414  cat classements_2018.txt
+  415  head -5 ann/2018/*/*   
+  416  grep "Location" ann/2018/*/* | cut -f5 | sort | uniq -c | sort -n | tail -15 > ./classements_2018.txt   
+  417  cat ./classements_2018.txt   
+  418  grep "Location" ann/2018/*/* | head -1 | cut -d' ' -f7   
+  419  grep "Location" ann/2018/*/* | head -1 | cut -d' ' -f8   
+  420  grep "Location" ann/2018/*/* | head -1 | cut -d' ' -f5
+  421  grep "Location" ann/2018/*/* | head -1 | cut -d' ' -f9
+  422  grep "Location" ann/2018/*/* | head -1 | cut -d' ' -f10
+  423  grep "Location" ann/2018/*/* | head -1 | cat -A   
+  424  grep "Location" ann/2018/*/* | cut -f3 | sort | uniq -c | sort -n | tail -15 > ./classements_2018.txt   
+  425  cat classements_2018.txt
+  426  grep "Location" ann/2016/*/* | cut -f3 | sort | uniq -c | sort -n | tail -15 > ./classements_2016.txt   
+  427  grep "Location" ann/2017/*/* | cut -f3 | sort | uniq -c | sort -n | tail -15 > ./classements_2017.txt   
+  428  cat classements_2016.txt
+  429  cat classements_2017.txt
+  430  git add classements_2016.txt classements_2017.txt classements_2018.txt 
+  431  git commit -m "Exercice 2.a"
+  432  git push origin main 
+  433  history
+  434  grep "Location" ann/*/04/* | cut -f3 | sort | uniq -c | sort -n | tail -15 > ./classements_04.txt 
+  435  cat ./classements_04.txt 
+  436  git add classements_04.txt
+  437  git commit -m "Exercice 2.b"
+  438  git push origin main 
+  439  git pull origin main 
+  440  git push origin main 
+  441  history
+  442  git tag fin-ex-pipelines 
+  
 ## 16/10/26
 # Séance 2
 ## Exercices git II: correction d'erreurs
