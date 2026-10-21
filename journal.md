@@ -4,77 +4,73 @@
 Travail de classement de fichier dans l'arborescence
 
 - Récupération du zip pour effectuer l'exercice et unzip:
--    wget http://plurital.org/ppe1/seance1/archive-11.zip
--    unzip a*
+-       wget http://plurital.org/ppe1/seance1/archive-11.zip
+-       unzip a*
 -    Création des dossiers et de leurs sous dossiers:
 -       dir txt ann img docs
-   57  cd txt
-   58  mkdir 2016 2017 2018
-   59  cd 2016
-   60  mkdir 01 02 03 04 05 06 07 08 09 10 11 12
-   62  cd ../../
-   63  mv 2016_01*.txt txt/2016/01
+      cd txt
+        mkdir 2016 2017 2018
+      cd 2016
+        mkdir 01 02 03 04 05 06 07 08 09 10 11 12
+        cd ../../
+        mv 2016_01*.txt txt/2016/01
 ==> Changer les mois pour effectuer le tri par mois  (01 à 12)
 ==> Répéter le processus pour txt/2017 et txt/2018
-
-  109  cd ann
-  118  mkdir 2016 2017 2018
-  119  cd 2016
-  120  mkdir 01 02 03 04 05 06 07 08 09 10 11 12
-  121  cd ../2017
-  122  mkdir 01 02 03 04 05 06 07 08 09 10 11 12
-  123  cd ../2018
-  124  mkdir 01 02 03 04 05 06 07 08 09 10 11 12
-  125  cd ../../
-  127  mv 2016_01*.ann ann/2016/01
-  139  mv 2017_01*.ann ann/2017/01
-  151  mv 2018_01*.ann ann/2018/01
+   
+      cd ann
+     mkdir 2016 2017 2018
+     cd 2016
+     mkdir 01 02 03 04 05 06 07 08 09 10 11 12
+     cd ../2017
+      mkdir 01 02 03 04 05 06 07 08 09 10 11 12
+     cd ../2018
+     mkdir 01 02 03 04 05 06 07 08 09 10 11 12
+     cd ../../
+     mv 2016_01*.ann ann/2016/01
+     mv 2017_01*.ann ann/2017/01
+     mv 2018_01*.ann ann/2018/01
 ==> A répéter en fonction des différentes années et des mois
 
-  165  ls *.ann
-  167  cd img
-  168  mkdir Paris Tokyo Washington Berlin Rome Romeo
-  169  cd ../..
-  170  mv Romeo*.png img/Romeo
-  171  mv Romeo*.jpg img/Romeo
-  172  mv *Romeo*.jpg img/Romeo
-  173  mv *.jpg img/
-  174  cd Exercice1
-  175  mv Romeo*.jpg img/Romeo
-  176  mv *Romeo*.jpg img/Romeo
-  177  mv *Romeo*.png img/Romeo
-  178  ls Rome
-  179  ls *Rome*
-  183  mv *Romeo*.JPG img/Romeo
-  184  mv *Rome*.JPG img/Rome
-  186  mv *Rome*.jpg img/Rome
-  187  mv *Rome*.svg img/Rome
-  188  mv *Rome*.png img/Rome
-  189  ls *Rome*
-  190  mv *Romeo*.jpeg img/Romeo
-  191  ls *Rome*
-  192  mv *Paris*.* img/Paris
-  193  ls *Paris*
-  194  ls 
-  195  ls *.docs
-  196  mv *.docx docs
-  197  mv *.odt docs
-  198  mv *.pdf docs
-  199  ls
-  200  mv *Washington*.* img/Washington
-  201  mv *Tokyo*.* img/Tokyo
-  203  mv *Kyoto*.* img/Kyoto
-  204  mkdir img/Kyoto
-  206  cd img
-  212  mkdir Taipei
-  213  cd ../
-  214  mv *Kyoto*.* img/Kyoto
-  215  mv *Berlin*.* img/Berlin
-  216  ls
-  217  mv *Taipei*.* img/Taipei
-  218  ls
-  219  cd ../
-  220  zip -r Exercice1.zip Exercice1/
+     ls *.ann
+     cd img
+     mkdir Paris Tokyo Washington Berlin Rome Romeo
+     cd ../..
+     mv Romeo*.png img/Romeo
+     mv Romeo*.jpg img/Romeo
+     mv *Romeo*.jpg img/Romeo
+     mv *.jpg img/
+     cd Exercice1
+     mv Romeo*.jpg img/Romeo
+     mv *Romeo*.jpg img/Romeo
+     mv *Romeo*.png img/Romeo
+     ls Rome
+     ls *Rome*
+     mv *Romeo*.JPG img/Romeo
+     mv *Rome*.JPG img/Rome
+     mv *Rome*.jpg img/Rome
+     mv *Rome*.svg img/Rome
+     mv *Rome*.png img/Rome
+     ls *Rome*
+     mv *Romeo*.jpeg img/Romeo
+     ls *Rome*
+     mv *Paris*.* img/Paris
+     ls *Paris*
+     ls *.docs
+     mv *.docx docs
+     mv *.odt docs
+     mv *.pdf docs
+     mv *Washington*.* img/Washington
+     mv *Tokyo*.* img/Tokyo
+     mv *Kyoto*.* img/Kyoto
+     mkdir img/Kyoto
+     cd img
+     mkdir Taipei
+     cd ../
+     mv *Kyoto*.* img/Kyoto
+     mv *Berlin*.* img/Berlin
+     mv *Taipei*.* img/Taipei
+     cd ../
+     zip -r Exercice1.zip Exercice1/
 
 ## 01/10/2026
 
